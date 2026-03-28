@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       {" "}
-      <h1>Weather App</h1>
       <Weather />
       <footer>
         This project was coding by Laura and is open-sources on{" "}
