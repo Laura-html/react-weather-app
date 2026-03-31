@@ -15,6 +15,15 @@ function App() {
         >
           {" "}
           Github
+        </a>{" "}
+        and hosted on{" "}
+        <a
+          href="https://reactweatherapp03.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          Netlify
         </a>
       </footer>
     </div>
