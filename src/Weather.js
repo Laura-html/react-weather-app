@@ -29,14 +29,19 @@ export default function Weather() {
         <li>Saturday 09:00</li>
         <li> Sunny</li>
       </ul>
-      <div className="row">
+      <div className="row mt-3">
         <div className="col-6">
-          <img
-            src="https://www.gstatic.com/weather/conditions/v1/svg/mostly_sunny_light.svg"
-            alt="Partly Sunny"
-          />
-          <span className="temperature">8</span>
-          <span className="unit">°C</span>
+          <div className="clearfix">
+            <img
+              src="https://www.gstatic.com/weather/conditions/v1/svg/mostly_sunny_light.svg"
+              alt="Partly Sunny"
+              className="float-left"
+            />
+            <div className="float-left">
+              <span className="temperature">8</span>
+              <span className="unit">°C|°F</span>
+            </div>
+          </div>
         </div>
         <div className="col-6">
           <ul>
