@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       {" "}
-      <Weather />
+      <Weather defaultCity="London" />
       <footer>
         This project was coding by Laura and is open-sources on{" "}
         <a
