@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate.js";
 import WeatherTemperature from "./WeatherTemperature.js";
+import WeatherIcon from "./WeatherIcon.js";
 
 export default function WeatherInfo(props) {
   return (
@@ -15,11 +16,8 @@ export default function WeatherInfo(props) {
       <div className="row mt-3">
         <div className="col-6">
           <div className="d-flex">
-            <div className="icon">
-              <img
-                src={`https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${weatherData.weather[0].icon}.png`}
-                alt={weatherData.weather[0].description}
-              />
+            <div>
+              <WeatherIcon icon={props.data.condition.icon_url} />
             </div>
 
             <div>
