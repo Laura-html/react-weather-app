@@ -26,18 +26,27 @@ export default function WeatherForecast(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  return (
-    <div>
-      <div className="WeatherForecast-day">{day()}</div>
-      <WeatherIcon code={props.data.icon} size={36} />
-      <div className="WeatherForecast-temperatures">
-        <span className="WeatherForecast-temperature-max">
-          {maxTemperature()}
-        </span>
-        <span className="WeatherForecast-temperature-min">
-          {minTemperature()}
-        </span>
+  if (loaded) {
+    return (
+      <div className="WeatherForecast">
+        <div className="row">
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    load();
+
+    return null;
+  }
 }
