@@ -12,13 +12,13 @@ export default function WeatherForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    console.log(response.data)
+    console.log(response.data);
     setForecast(response.data.daily);
     setLoaded(true);
   }
 
   function load() {
-    let apiKey = 9245bb24b027319eb10oat71638b73cf;
+    let apiKey = "9245bb24b027319eb10oat71638b73cf";
     let longitude = props.coordinates.longitude;
     let latitude = props.coordinates.latitude;
     let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
